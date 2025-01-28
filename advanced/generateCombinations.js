@@ -11,6 +11,25 @@
  * [ [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3] ].
  */
 
+function generateCombinations(array){
+    const result = []; 
+
+    const totalCombinations = Math.pow(2, array.length); 
+
+    for (let i = 1; i < totalCombinations; i++) { 
+        const combination = []; 
+
+        for (let j = 0; j < array.length; j++) { 
+            if (i & (1 << j)) { 
+                combination.push(array[j]);
+            }
+        }
+
+        result.push(combination);
+    }
+
+    return result;
+}
 
 
 module.exports = generateCombinations;
