@@ -11,7 +11,8 @@
  */
 
 // Write your solution here
-function sumArray(numbers){
-    return numbers.reduce((prev , current) => prev + current)
+function sumArray(numbers) {
+    return numbers.reduce((prev, current) => prev + current, 0);
 }
+
 module.exports = sumArray;

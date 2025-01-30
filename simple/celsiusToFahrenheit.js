@@ -11,8 +11,11 @@
  */
 
 // Write your solution here
-function celsiusToFahrenheit(celsius){
-    return (celsius * 9/5) + 32
-}
+
+// function celsiusToFahrenheit(celsius){
+//     return (celsius * 9/5) + 32
+// }
+// behine
+const celsiusToFahrenheit = (celsius) => (celsius * 9/5) + 32;
 
 module.exports = celsiusToFahrenheit;

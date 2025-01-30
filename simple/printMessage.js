@@ -10,8 +10,10 @@
  */
 
 // Write your solution here
-function printMessage(message) {
-  console.log(message);
-}
+// function printMessage(message) {
+//   console.log(message);
+// }
+// behine
+const printMessage = (message  = "No message provided") => console.log(message);
 
 module.exports = printMessage;
