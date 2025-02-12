@@ -13,5 +13,7 @@
 function printMessage(message) {
   console.log(message);
 }
+printMessage("first pull req") // برای تست کردن 
+
 
 module.exports = printMessage;
