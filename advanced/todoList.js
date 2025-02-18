@@ -14,31 +14,11 @@
 
 // Write your solution here
 
-let tasks = [];
+let output = [];
 
-function addTask(task) {
-    tasks.push(task);
-    console.log(`Task added: ${task}`);
-}
-function removeTask(task){
-    const index = tasks.indexOf(task);
-    if (index !== -1) {
-        tasks.splice(index, 1);
-        console.log(`Task removed: ${task}`);
-    } else {
-        console.log(`Task not found: ${task}`);
-    }
-}
-
-function showTasks() {
-    if (tasks.length === 0) {
-        console.log("No tasks available.");
-    } else {
-        tasks.forEach(task => {
-            console.log(`- ${task}`);
-        });
-    }
-}
+addTask = (Task) =>  output.includes(Task) ? false : output.push(Task)
+removeTask = (Task) => output.includes(Task) ? output.splice(output.indexOf(Task),1) : false
+showTasks = () => output
 
 
 module.exports = { addTask, removeTask, showTasks };
