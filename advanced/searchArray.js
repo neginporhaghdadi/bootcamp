@@ -20,9 +20,8 @@
 //     return false;
 // }
 
-function searchArray(array, num) {
-    return array.includes(num);
-}
+searchArray = (array, num) => array.includes(num);
+
 
 module.exports = searchArray;
 

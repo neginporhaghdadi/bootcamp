@@ -14,29 +14,11 @@
  * showUsers() should return [].
  */
 
-let userdata = [];
-function addUser(user) {
-    userdata.push(user);
-    console.log(`${user}`);
-}
-function showUsers() {
-    if (userdata.length === 0) {
-        console.log("No users found.");
-    } else {
-        userdata.forEach((user, index) => {
-            console.log(`${index + 1}. ${user}`);
-        });
-    }
-}
-function removeUser(user) {
-    const index = userdata.indexOf(user); 
-    if (index !== -1) {
-        userdata.splice(index, 1);
-        console.log(`${user} has been removed.`);
-    } else {
-        console.log(`${user} not found.`);
-    }
-}
+let output = [];
+
+addUser = (user) => output.includes(user) ? false : output.push(user)
+removeUser = (user) => output.includes(user) ? output.splice(output.indexOf(user),1) : false
+showUsers = () => output
 
 
 module.exports = { addUser, removeUser, showUsers };
