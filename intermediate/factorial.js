@@ -23,12 +23,9 @@
 //     return result;
 // }
 // behine
-function factorial(n) {
-    if (n === 0 || n === 1) { 
-        return 1; 
-    }
-    return n * factorial(n - 1);
-}
+
+factorial= (n) => n === 0 || n === 1 ? 1 : n * factorial(n - 1)
+// روشت برای به دست آوردن فاکتوریل خیلی جالب بود:)
 
 
 

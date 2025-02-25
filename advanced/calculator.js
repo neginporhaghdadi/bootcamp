@@ -14,22 +14,10 @@
  */
 
 // Write your solution here
-function add(a, b) {
-    return a + b;
-}
 
-function subtract(a, b) {
-    return a - b;
-}
+add = (a, b) => a + b;
+subtract = (a, b) => a - b;
+multiply = (a, b) =>  a * b;
+divide = (a, b) =>(b === 0) ? NaN : a / b
 
-function multiply(a, b) {
-    return a * b;
-}
-
-function divide(a, b) {
-    if (b === 0) {
-        return NaN; 
-    }
-    return a / b;
-}
 module.exports = { add, subtract, multiply, divide };

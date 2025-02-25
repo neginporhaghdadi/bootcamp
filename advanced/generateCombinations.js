@@ -11,22 +11,26 @@
  * [ [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3] ].
  */
 
-function generateCombinations(array){
-    const result = []; 
+generateCombinations = (array) =>array.length === 1 ? [array] : sum(array) 
+    function sum (array){
 
-    const totalCombinations = Math.pow(2, array.length); 
-
-    for (let i = 1; i < totalCombinations; i++) { 
-        const combination = []; 
-
-        for (let j = 0; j < array.length; j++) { 
-            if (i & (1 << j)) { 
-                combination.push(array[j]);
-            }
+        if(array.length === 0 ){
+            return []
         }
 
-        result.push(combination);
+    const result = []; 
+
+    for(item of array){
+        result.push([item])
     }
+
+    for(let i = 0 ; i <= array.length -2 ; i++){
+        for (let j = i + 1; j < array.length; j++) {
+            result.push([array[i], array[j]]);
+        }
+    }
+
+    result.push(array);
 
     return result;
 }

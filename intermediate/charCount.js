@@ -11,9 +11,8 @@
  */
 
 // Write your solution here
-function charCount(string, itemcount) {
-    return string.split("").filter(char => char === itemcount).length;
-}
+charCount = (string, itemcount) => string.split("").filter(char => char === itemcount).length;
+
 
 module.exports = charCount;
 

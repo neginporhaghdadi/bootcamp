@@ -10,10 +10,8 @@
  * calculateAverage([10, 20, 30]) should return 20.
  */
 
-function calculateAverage(array) {
-    if (array.length === 0) return NaN; 
-    let sum = array.reduce((acc, num) => acc + num, 0);
-    return sum / array.length;
-}
+calculateAverage = (array) => array.length === 0 ?  NaN : 
+array.reduce((acc, num) => acc + num, 0) / array.length
+
 
 module.exports = calculateAverage;

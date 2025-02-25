@@ -14,24 +14,10 @@
 
 // Write your solution here
 
-let tasks = [];
+let output = [];
 
-function addTask(task) {
-	tasks.push(task);
-}
 
-function removeTask(task) {
-	const index = tasks.indexOf(task);
-	if (index > -1) {
-		tasks.splice(index, 1);
-	}
-
-    // if you dont want to use clean Before running tests use this in removeTask function!
-    // tasks = tasks.filter(t => t !== task);
-}
-
-function showTasks() {
-	return tasks;
-}
-
+addTask = (Task) =>  output.includes(Task) ? false : output.push(Task)
+removeTask = (Task) => output.includes(Task) ? output.splice(output.indexOf(Task),1) : false
+showTasks = () => output
 module.exports = { addTask, removeTask, showTasks };
