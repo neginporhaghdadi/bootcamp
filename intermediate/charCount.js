@@ -11,34 +11,9 @@
  */
 
 // Write your solution here
-function charCount(string , itemcount){
-   let newarray = string.split("");
-   if (newarray.includes(itemcount) ){
-    for (let index = 0; index < itemcount.length; index++) {
-         index += 1   
-    }
-   }
-   console.log('this charactor is not exist');
-}
-
 function charCount(string, itemcount) {
-
-    let newarray = string.split("");
-
-    let count = 0;
-
-
-    if (newarray.includes(itemcount)) {
-        for (let index = 0; index < newarray.length; index++) {
-            if (newarray[index] === itemcount) {
-                count++;
-            }
-        }
-        return count; 
-    } else {
-        console.log('This character does not exist');
-        return 0; 
-    }
+    return string.split("").filter(char => char === itemcount).length;
 }
 
 module.exports = charCount;
+

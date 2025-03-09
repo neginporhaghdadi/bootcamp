@@ -17,25 +17,27 @@
 let userdata = [];
 function addUser(user) {
     userdata.push(user);
-    console.log(`${user}`);
 }
 function showUsers() {
-    if (userdata.length === 0) {
-        console.log("No users found.");
-    } else {
-        userdata.forEach((user, index) => {
-            console.log(`${index + 1}. ${user}`);
-        });
-    }
+    // if (userdata.length === 0) {
+    //     console.log("No users found.");
+    // } else {
+    //     userdata.forEach((user, index) => {
+    //         console.log(`${index + 1}. ${user}`);
+    //     });
+    // }
+    return userdata
 }
 function removeUser(user) {
-    const index = userdata.indexOf(user); 
-    if (index !== -1) {
-        userdata.splice(index, 1);
-        console.log(`${user} has been removed.`);
-    } else {
-        console.log(`${user} not found.`);
-    }
+    // const index = userdata.indexOf(user); 
+    // if (index !== -1) {
+    //     userdata.splice(index, 1);
+    //     console.log(`${user} has been removed.`);
+    // } else {
+    //     console.log(`${user} not found.`);
+    // }
+
+    userdata = userdata.fill(item => item !== user)
 }
 
 

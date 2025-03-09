@@ -4,7 +4,15 @@ const {
   showUsers,
 } = require("../advanced/userManagement");
 
+
+
 describe("User Management", () => {
+
+  beforeEach(() => {
+		showUsers().forEach(user => removeUser(user));
+	});
+
+
   it("should add a user correctly", () => {
     addUser("Hesam");
     expect(showUsers()).toContain("Hesam");

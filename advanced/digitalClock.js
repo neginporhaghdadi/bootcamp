@@ -18,16 +18,20 @@
  * (e.g., `<div id="clock"></div>`) to display the clock.
  */
 function digitalClock() {
-    setInterval(() => {
-        let showTime = document.getElementById('clock');
+    const showTime = document.getElementById('clock');
+    const updateClock = () => {
         let time = new Date();
         let timeHours = String(time.getHours()).padStart(2, '0');
         let timeMin = String(time.getMinutes()).padStart(2, '0');
         let timeSec = String(time.getSeconds()).padStart(2, '0');
-        showTime.innerHTML = `${timeHours} : ${timeMin} : ${timeSec}`;
-    }, 1000); 
+        showTime.innerHTML = `${timeHours}:${timeMin}:${timeSec}`;
+    };
+    
+   
+    updateClock();
+    
+    setInterval(updateClock, 1000);
 }
 
-digitalClock();
 module.exports = digitalClock;
 

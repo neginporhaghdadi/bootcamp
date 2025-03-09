@@ -11,8 +11,10 @@
  */
 
 // Write your solution here
-function reverseString(item){
-   return item.split('').reverse().join('');
-}
+// function reverseString(item){
+//    return item.split('').reverse().join('');
+// }
+// behine
+const reverseString = item => item.split('').reverse().join('');
 
 module.exports = reverseString;

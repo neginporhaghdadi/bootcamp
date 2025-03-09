@@ -11,12 +11,14 @@
  */
 
 // Write your solution here
-function isEvenOrOdd(number){
-    if(number %  2 === 0){
-        return "Even"
-    }else{
-        return "Odd"
-    }
-}
-
+// function isEvenOrOdd(number){
+//     if(number %  2 === 0){
+//         return "Even"
+//     }else{
+//         return "Odd"
+//     }
+// }
+// behine
+const isEvenOrOdd = (number) => number %  2 === 0 ? "Even" : "Odd";
+    
 module.exports = isEvenOrOdd;

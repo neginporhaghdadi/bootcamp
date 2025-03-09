@@ -10,11 +10,9 @@
  * calculateAverage([10, 20, 30]) should return 20.
  */
 
-function calculateAverage(array){
-    let sum = 0;
-    for (let item of array) {
-        sum += item;
-    }
+function calculateAverage(array) {
+    if (array.length === 0) return NaN; 
+    let sum = array.reduce((acc, num) => acc + num, 0);
     return sum / array.length;
 }
 
